@@ -24,6 +24,7 @@ func main() {
 
 }
 
+// Concatenate strings with loop
 func timeToConcat(letters []string) (duration time.Duration, outputString string) {
 	t0 := time.Now()
 	word := ""
@@ -33,6 +34,7 @@ func timeToConcat(letters []string) (duration time.Duration, outputString string
 	return time.Since(t0), word
 }
 
+// Concatenate strings using strings.Builder
 func timeUsingStringBuilder(letters []string) (duration time.Duration, outputString string) {
 	t0 := time.Now()
 	var stringBuilder strings.Builder
@@ -43,6 +45,7 @@ func timeUsingStringBuilder(letters []string) (duration time.Duration, outputStr
 	return time.Since(t0), word
 }
 
+// Concatenate strings using strings.Join
 func timeUsingJoin(letters []string) (duration time.Duration, outputString string) {
 	t0 := time.Now()
 	word := strings.Join(letters, "")
